@@ -1,5 +1,3 @@
-# 04-active-directory-setup.md
-
 ## Active Directory Deployment
 
 ### Installation & Promotion
@@ -52,3 +50,4 @@ LAB.local
 * DNS misconfiguration may prevent clients from locating domain controllers.
 * Time sync issues can cause Kerberos authentication failures.
 * Ensure firewall ports 88, 389, 445, 53 are open between DC and clients.
+
