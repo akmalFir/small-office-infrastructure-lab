@@ -1,9 +1,5 @@
 # Small Office Infrastructure Lab
 
-A fully virtualized small-office IT environment designed to simulate real-world infrastructure used in SMEs. This project showcases networking, system administration, security hardening, monitoring, and documentation skills relevant to IT Infrastructure, NOC, and SysAdmin roles.
-
----
-
 ## 📌 Project Summary
 
 This lab simulates a 20-user company with multiple departments, a segmented network, centralized identity management, secure file sharing, monitoring, and logging. Everything is built using open-source and enterprise tools:
@@ -134,5 +130,4 @@ The goal of this lab is to demonstrate real-world IT infrastructure skills that 
 - Config baseline with Ansible or DSC
 - Expanded monitoring templates
 
----
 
