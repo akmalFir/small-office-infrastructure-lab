@@ -1,5 +1,3 @@
-# 03-pfsense-setup.md
-
 ## pfSense Setup
 
 ### Installation & Interface Configuration
@@ -58,3 +56,4 @@ Port: 514 UDP
 * Confirm DHCP ranges do not overlap.
 * Review firewall logs for blocked packets.
 * Ensure WAN connectivity if Internet access fails.
+
