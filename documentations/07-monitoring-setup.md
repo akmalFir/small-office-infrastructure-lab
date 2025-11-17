@@ -1,5 +1,3 @@
-# 07-monitoring-setup.md
-
 ## Zabbix Monitoring Setup
 
 ### Installation Commands
@@ -34,3 +32,4 @@ sudo dnf install zabbix-server-mysql zabbix-frontend-php zabbix-apache-conf zabb
 * Ensure firewall allows Zabbix Agent communication (port 10050).
 * Verify MySQL service is running for Zabbix server.
 * Check agent logs for connection errors.
+
