@@ -1,5 +1,3 @@
-# 02-network-architecture.md
-
 ## Network Architecture
 The lab network is segmented into VLANs for security and traffic isolation.
 
