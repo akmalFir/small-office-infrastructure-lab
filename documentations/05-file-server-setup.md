@@ -1,5 +1,3 @@
-# 05-file-server-setup.md
-
 ## File Server Configuration
 
 ### Folder Structure
@@ -39,3 +37,4 @@ New-SmbShare -Name "IT" -Path "D:\Shares\Departments\IT" -FullAccess "Administra
 * Confirm network connectivity to the file server.
 * Verify DNS resolution of server name from clients.
 * Check Windows Firewall if shares are inaccessible.
+
