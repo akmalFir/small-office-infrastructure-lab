@@ -1,4 +1,5 @@
 # Small Office Infrastructure Lab
+A fully virtualized small-office IT environment designed to simulate real-world infrastructure used in SMEs. This project showcases networking, system administration, security hardening, monitoring, and documentation skills relevant to IT Infrastructure, NOC, and SysAdmin roles.
 
 ## 📌 Project Summary
 
@@ -13,7 +14,6 @@ This lab simulates a 20-user company with multiple departments, a segmented netw
 
 This mirrors how a real small-to-medium company operates.
 
----
 
 ## 📡 Network Architecture
 
@@ -29,7 +29,6 @@ The network is segmented into multiple VLANs following least-privilege principle
 
 A full network diagram is included in the `diagrams/` folder.
 
----
 
 ## 🧩 Components
 
@@ -73,7 +72,6 @@ A full network diagram is included in the `diagrams/` folder.
 - Linux audit logs
 - Security dashboards and alerts
 
----
 
 ## 📁 Documentation
 
@@ -90,13 +88,11 @@ All setup guides and configs are stored in the `documentation/` folder:
 - 09 — Backup Procedures  
 - 10 — Security Controls  
 
----
 
 ## 📸 Screenshots
 
 Screenshots of major components (AD, GPO, pfSense, monitoring, logging) are stored in the `screenshots/` folder.
 
----
 
 ## 🧪 Skills Demonstrated
 
@@ -114,13 +110,11 @@ This lab highlights practical skills useful for infra and sysadmin roles:
 - Infrastructure documentation
 - Troubleshooting and hardening
 
----
 
 ## 🎯 Purpose
 
 The goal of this lab is to demonstrate real-world IT infrastructure skills that employers look for in junior SysAdmin, Infrastructure, and NOC positions.
 
----
 
 ## 🚀 Future Enhancements
 
