@@ -1,5 +1,3 @@
-# 06-ubuntu-ad-join.md
-
 ## Joining Ubuntu to Active Directory
 
 ### Install Required Packages
@@ -49,3 +47,4 @@ getent passwd labuser
 * Kerberos authentication may fail if system clocks are not synced.
 * DNS must resolve the AD domain correctly.
 * If `realm discover` fails, verify SRV records exist in the AD DNS zone.
+
