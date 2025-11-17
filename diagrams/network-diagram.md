@@ -1,42 +1,47 @@
 ```mermaid
+flowchart TD
 
-graph TD
+    INET([Internet])
 
-subgraph Internet
-    A[ISP Router]
-end
+    PF[pfsense<br>Firewall/Router]
 
-A --> PF[pfSense Firewall]
+    SWITCH[[Managed Switch<br>VLAN Trunk]]
 
-subgraph VLAN 10 - Management
-    M1[Proxmox / Hypervisor]
-end
+    INET --> PF --> SWITCH
 
-subgraph VLAN 20 - Servers
-    DC[DC01 - Windows AD Server]
-    FS[FS01 - File Server]
-    APP[SRV-APP01 - Ubuntu App Server]
-    MON[SRV-MON01 - Monitoring Server]
-    LOG[SRV-LOG01 - Logging Server]
-end
+    %% VLAN Sections
+    subgraph VLAN10["VLAN 10 - Management (10.10.10.0/24)"]
+        ADMINPC[Admin PC]
+    end
 
-subgraph VLAN 30 - Users
-    W10[Windows 11 Client]
-    UDESK[Ubuntu Desktop]
-end
+    subgraph VLAN20["VLAN 20 - Staff (10.10.20.0/24)"]
+        STAFFPC[Staff PC]
+    end
 
-subgraph VLAN 40 - Guest WiFi
-    GW1[Guest Devices]
-end
+    subgraph VLAN30["VLAN 30 - Finance (10.10.30.0/24)"]
+        FINPC[Finance PC]
+    end
 
-PF --> M1
-PF --> DC
-PF --> FS
-PF --> APP
-PF --> MON
-PF --> LOG
-PF --> W10
-PF --> UDESK
-PF --> GW1
+    subgraph VLAN50["VLAN 50 - Guest (10.10.50.0/24)"]
+        GUEST[Guest WiFi]
+    end
 
+    subgraph VLAN40["VLAN 40 - Servers (10.10.40.0/24)"]
+        DC[SRV-DC01<br>Active Directory<br>DNS/DHCP/GPO]
+        FS[SRV-FS01<br>File Server<br>SMB Shares]
+        LNX[SRV-LNX01<br>Ubuntu Server<br>AD-Joined]
+        MON[SRV-MON01<br>Zabbix/Nagios]
+        LOG[SRV-LOG01<br>Graylog/Wazuh]
+    end
+
+    SWITCH --> ADMINPC
+    SWITCH --> STAFFPC
+    SWITCH --> FINPC
+    SWITCH --> GUEST
+
+    SWITCH --> DC
+    SWITCH --> FS
+    SWITCH --> LNX
+    SWITCH --> MON
+    SWITCH --> LOG
 ```
