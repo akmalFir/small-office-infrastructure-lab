@@ -9,7 +9,7 @@ This lab simulates a 20-user company with multiple departments, a segmented netw
 - Windows Server 2022 for Active Directory, DNS, DHCP, and GPO
 - Windows Server 2022 for file services
 - Ubuntu Server for Linux workloads
-- Zabbix/Nagios for monitoring
+- Zabbix for monitoring
 - Graylog/Wazuh for centralized logging
 
 This mirrors how a real small-to-medium company operates.
@@ -21,10 +21,10 @@ The network is segmented into multiple VLANs following least-privilege principle
 
 | VLAN | Name        | Subnet         | Purpose                              |
 |------|-------------|----------------|--------------------------------------|
-| 10   | Management  | 10.10.10.0/24  | Admin and server management          |
-| 20   | Staff       | 10.10.20.0/24  | General employee devices             |
-| 30   | Finance     | 10.10.30.0/24  | Restricted finance users             |
-| 40   | Servers     | 10.10.40.0/24  | Domain controller, file server, etc. |
+| 10   | Server      | 10.10.10.0/24  | Domain controller, file server, etc. |
+| 20   | Management  | 10.10.20.0/24  | Admin and server management          |
+| 30   | Staff       | 10.10.30.0/24  | General employee devices             |
+| 40   | Finance     | 10.10.40.0/24  | Restricted finance users             |
 | 50   | Guest       | 10.10.50.0/24  | Internet-only guest network          |
 
 A full network diagram is included in the `diagrams/` folder.
@@ -60,7 +60,7 @@ A full network diagram is included in the `diagrams/` folder.
 - Kerberos + SSSD authentication
 - Internal services (wiki, dashboard, or utility apps)
 
-### 5. Monitoring (Zabbix or Nagios)
+### 5. Monitoring (Zabbix)
 - CPU, RAM, disk tracking
 - Service uptime (AD, DNS, SMB, HTTP)
 - Network latency and packet loss
