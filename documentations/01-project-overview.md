@@ -1,3 +1,5 @@
+# 02 — Project Overview
+
 ## Project Overview
 This lab simulates a full small-office infrastructure environment, designed to demonstrate professional IT infrastructure skills. It covers network segmentation, authentication, file services, monitoring, logging, automation, backup procedures, and troubleshooting steps. All components are deployed in virtual machines to emulate production-grade environments.
 
